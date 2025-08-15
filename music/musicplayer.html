@@ -1,0 +1,311 @@
+<html>
+    <head>
+        <title>MUSIC PLAYER</title>
+        <link rel="stylesheet" href="wbsitestyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .yadav{
+            color: white;
+            font-size: 20px;
+            padding: 10px 90px;
+            margin: 0;
+
+        }
+        span{
+            color: red;;
+        }
+        div.english{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            width: 100%;
+            /* height: 55%; */
+            display: flex;
+        }
+        .mp31{
+            color: rgb(255, 255, 255);
+            /* text-shadow: 2px 2px 8px rgb(255, 255, 255); */
+            font-size: 50px;
+            margin: 0;
+            font-family: "Edu NSW ACT Hand Cursive","savate";
+            animation: mp3 4s infinite;
+            transition: all 2s;
+        }
+        .mp3{
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 8px rgb(255, 255, 255);
+            font-size: 50px;
+            margin: 0;
+            font-family: "Edu NSW ACT Hand Cursive","savate";
+        }
+        @keyframes mp3 {
+    0% {
+        filter: drop-shadow(0 0 0px white);
+        transform: scale(1);
+        color: #fff;
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgb(246, 255, 0));
+        transform: scale(1.1) skew(3deg);
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        filter: drop-shadow(0 0 0px white);
+        transform: scale(1);
+        color: #fff;
+    }
+}
+        .perfect{
+            color: rgb(255, 0, 179);
+            font-size: 30px;
+            padding: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        /* button:hover{
+            color:white;
+            background-color: red;
+        } */
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tamil{
+            border-top: 4px solid red;
+            border-bottom: 4px solid red;
+        }
+        .one{
+            border : 4px solid rgb(255, 0, 0);
+            margin:70px;
+            float:left;
+            width: 153px ;      
+            height: 200px;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: 1s ease;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        img{
+            height: 150px;
+        }
+        .one2{
+            padding:15px;
+            text-align: center;
+            font-size: 10px;
+            color:black;
+        }
+        .one:hover{
+            background-color: rgb(60, 62, 63);
+            margin: 68px;
+            box-shadow : 0px 0px 30px 9px rgb(162, 145, 145);
+            font-size: 25px;
+            color:aliceblue;
+                      
+        }
+        .video{
+            color : white;
+            font-size: 10px;
+
+        }
+        .one:hover img{
+            transition: 1s ease-in-out;
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 10px auto 0 auto;
+        }
+        .one:hover .one2{
+            color: white;
+            /* padding: 0;
+            margin: 0; */
+            text-align: center;
+        }
+        .one:hover .video{
+            color: white;
+            font-size: 13px;
+            padding-left: 24px;
+            padding-right: 18px;
+            margin: 0;
+        }
+        .video111{
+            text-decoration: none;
+            color: rgb(47, 47, 47);
+            background-color: aliceblue;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 0px 10px white;
+        }
+        .headphone{
+            opacity: 0;
+            margin-left: 10%;
+            margin-top: 5%;
+            color: #fff;
+            font-size: 30px;
+            transition: all 2s;
+        }
+        div.english:hover .air1 img{
+            transition: all 2s ;
+            transform: scale(1.7);
+            animation: headphone 5s   infinite alternate;
+        }
+        div.english:hover .headphone{
+            opacity: 1;
+            text-shadow: 3px 3px 9px white;
+            text-decoration:dashed;
+        }
+@keyframes headphone {
+  0% {
+    transform: rotate(-15deg) scale(1);
+    filter: drop-shadow(0 0 0px #fff);
+  }
+  20% {
+    transform: rotate(0deg) scale(1.4);
+    filter: drop-shadow(0 0 10px #ff00de);
+  }
+  40% {
+    transform: rotate(15deg) scale(1.3);
+    filter: drop-shadow(0 0 15px #00eaff);
+  }
+  60% {
+    transform: rotate(0deg) scale(1.7);
+    filter: drop-shadow(0 0 20px #fff200);
+  }
+  80% {
+    transform: rotate(-15deg) scale(1.4);
+    filter: drop-shadow(0 0 10px #ff00de);
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+    filter: drop-shadow(0 0 0px #fff);
+  }
+}
+@media screen and (max-width: 740px){
+    .air1 img{
+        opacity: 0;
+    }
+}
+    </style>
+    </head>
+    <body>
+        <div style="background-color: grey; display: flex; color: rgb(231, 227, 227); align-items: center; justify-content: center; margin-top: 40px;">
+        <!-- <center> -->
+            <img src="/front end/movie website/kollywood_kural-removebg-preview.png" style="height: 100px; width: auto;">
+            <h4>Kollywood Kural</h4>
+        <!-- </center> -->
+      </div>
+        <nav class="navbar navbar-expand-md navigation justify-content-center fixed-top" style="background-color: grey;">
+
+            <button class="navbar-toggler" type="button" data-target="#collapsibleNavbar" data-toggle="collapse" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid #000000; background-color: #fff;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/movie website/website1.html" style="text-decoration: none; color: black;">Home</a></li>
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/movie website/website1.html#movies" style="text-decoration: none; color: black;">&nbsp;&nbsp;&nbsp;Movies</a></li>
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/movie website/actors1.html" style="text-decoration: none; color: black;">&nbsp;&nbsp;&nbsp;Actors</a></li>                
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/css/music/musicplayer.html" style="text-decoration: none; color: black;">&nbsp;&nbsp;&nbsp;Music</a></li>
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/movie website/website1.html#aboutus" style="text-decoration: none; color: black;">&nbsp;&nbsp;&nbsp;About us</a></li>
+                    <li class="navname nav-item"><a class="nav-link" href="/front end/movie website/website1.html#contactus" style="text-decoration: none; color: black;">&nbsp;&nbsp;&nbsp;Contact us</a></li>
+                    <li class="navicon nav-item">
+                        <a href="https://www.instagram.com/" style="text-decoration: none;" class="nav-link">&nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" style="color: black;">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                           </svg>
+                        </a>
+                    </li>
+                    <li class="navicon nav-item">
+                        <a href="https://www.facebook.com/" style="text-decoration: none;" class="nav-link">&nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" style="color: black;">
+                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navicon nav-item">
+                        <a href="https://www.youtube.com/" style="text-decoration: none;" class="nav-link">&nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" style="color: black;">
+                              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>  
+            </div>
+        </nav>
+                    <marquee direction="top" behaviour="alternate" style="background-color: #000000ba; font-size: 20px; color: #fff; ">Your Favourite 🎶  ▶︎•၊၊||၊|။||||။၊|။၊|။||||။၊၊|။||||။၊•  🎶 Music At Your Hand</marquee>
+      <div class="main">  
+        
+        <div class="english" >
+            <div style="width: 25%;" class="air1"><img src="airpods left.png" style="margin: 80px;"><br></div>
+            <div style="width: 50%;">
+            <center>
+            <span class="mp3 mp31">&nbsp;Mp3&nbsp;</span><br><br>
+            <span class="perfect">The Perfect Music</span><br><br>
+            <span class="mp3">Welcome To The<br> Kollywood Kural</span><br>
+            <span style="color: white;">This website is the website where you can listen to music without any los of quality</span><br><br>
+            
+            <span class="headphone">USE HEADPHONES FOR BETTER EXPERIENCE</span>
+            <br>
+            </center>
+            </div>
+            <div style="width: 25%;" class="air1"><img src="airpods right.png" style="margin: 80px;"><br></div>
+        </div>
+        <br>
+        <div class="animation1">🎶</div>
+        <div class="one" id="music">
+            <a href="LEO - Naa Ready Lyric Video  Thalapathy Vijay  Lokesh Kanagaraj  Anirudh Ravichander.mp3"><img src="naa ready dhan.jpg" alt="naa ready dhan"></a>
+            <div class="one2">
+                NAA READY DHAN - ANIRUDH</div>
+            <div class="video"><a href='https://youtu.be/3wDiqlTNlfQ?si=xHbjRoO4O2KZmrLi' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="LEO - Naa Ready Lyric Video  Thalapathy Vijay  Lokesh Kanagaraj  Anirudh Ravichander.mp3">Audio</a></div>
+        </div>
+        <div class="one">
+            <a href="Full Video_ Whistle Podu  The Greatest Of All Time  Thalapathy Vijay  VP  U1  AGS.mp3"><img src="whistle podu.jpg" alt="naa ready dhan"></a>
+            <div class="one2">WHISTLE PODU - YUVAN</div>
+            <div class="video"><a href='https://youtu.be/QqEarYb0Uaw?si=OAOL2B_qDYm_ngu9' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Full Video_ Whistle Podu  The Greatest Of All Time  Thalapathy Vijay  VP  U1  AGS.mp3">Audio</a></div>
+        </div>
+        <div class="one">
+            <a href="Bigil - Verithanam Video  Thalapathy Vijay  @A. R. Rahman  Atlee.mp3"><img src="verithanam.jpg" alt="naa ready dhan"></a>
+            <div class="one2">VERITHANAM - ARR</div>
+            <div class="video"><a href='https://youtu.be/rtd_VveAEaI?si=KqsiQeua_rKqubuo' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Bigil - Verithanam Video  Thalapathy Vijay  @A. R. Rahman  Atlee.mp3">Audio</a></div>
+        </div>
+        <div class="one">
+            <a href="Arabic Kuthu - Video Song  Beast  Thalapathy Vijay  Pooja Hegde  Sun Pictures  Nelson  Anirudh.mp3"><img src="Arabic_Kuthu.jpg" alt="naa ready dhan"></a>
+            <div class="one2">ARABIC KUTHU - ANIRUDH</div>
+            <div class="video"><a href='https://youtu.be/KUN5Uf9mObQ?si=HuZcyT3_9_ivtwDt' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Arabic Kuthu - Video Song  Beast  Thalapathy Vijay  Pooja Hegde  Sun Pictures  Nelson  Anirudh.mp3">Audio</a></div>
+
+        </div>
+        <div class="one">
+            <a href="MATTA (Lyrical Song) Tamil  Thalapathy Vijay  Venkat Prabhu  Yuvan Shankar Raja  The GOAT.mp3"><img src="matta.jpg" alt="naa ready dhan"></a>
+            <div class="one2">MATTA - YUVAN</div>
+            <div class="video"><a href='https://youtu.be/IZHGcU0U_W0?si=30EDHPgaNJAyx-co' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="MATTA (Lyrical Song) Tamil  Thalapathy Vijay  Venkat Prabhu  Yuvan Shankar Raja  The GOAT.mp3">Audio</a></div>
+
+        </div>
+        <div class="one">
+            <a href='Master - Kutti Story Video  Thalapathy Vijay  Anirudh Ravichander  Lokesh Kanagaraj.mp3'><img src="kutty story.jpg" alt="naa ready dhan"></a>
+            <div class="one2">KUTTY STORY - ANIRUDH</div>
+            <div class="video"><a href='https://youtu.be/nCNqPgXDYhY?si=y0CDMglQOsYkY-eM' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Master - Kutti Story Video  Thalapathy Vijay  Anirudh Ravichander  Lokesh Kanagaraj.mp3">Audio</a></div>
+        </div>
+        <div class="one">
+            <a href="Mersal - Aalaporan Thamizhan Tamil Video  Vijay  A.R. Rahman.mp3"><img src="Aalaporan_Thamizhan.jpg" alt="naa ready dhan"></a>
+            <div class="one2">AALAPORAN THAMILAN-ARR</div>
+            <div class="video"><a href='https://youtu.be/xsbLtHql4g8?si=ZivDDC0D_7qrkFbI' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Mersal - Aalaporan Thamizhan Tamil Video  Vijay  A.R. Rahman.mp3">Audio</a></div>
+
+        </div>
+        <div class="one">
+            <a href="Ranjithame - Varisu Lyric Song (Tamil)  Thalapathy Vijay  Rashmika  Vamshi Paidipally  Thaman S.mp3"><img src="ranjithamae.jpg" alt="naa ready dhan"></a>
+
+            <div class="one2">RANJITHAME - THAMAN</div>
+            <div class="video"><a href='https://youtu.be/unQlCp-lL6I?si=RTHheUsOiOhbkbk3' class="video111">Video</a> &nbsp;&nbsp; <a class="video111" href="Ranjithame - Varisu Lyric Song (Tamil)  Thalapathy Vijay  Rashmika  Vamshi Paidipally  Thaman S.mp3">Audio</a></div>
+
+        </div>
+      </div>  
+    </body>
+</html>
